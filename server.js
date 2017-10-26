@@ -59,6 +59,13 @@ app.get('/about', (request,response) => {
   });
 });
 
+app.get('/projects', (request,response) => {
+
+  response.render('project.hbs', {
+    pageTitle : 'Projects page',
+  });
+});
+
 app.get('/bad', (request,response) => {
   response.send({errorMessage : 'Unable to handle request'});
 });
